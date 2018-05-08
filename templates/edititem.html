@@ -1,0 +1,14 @@
+{% extends "pageframework.html" %}
+
+{% block content %}
+
+<form action= "{{url_for('editItem', sport_id = sport_id, item_id=item.id)}}" method = 'POST'>
+
+<p>Name:</p>
+<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'>
+
+<input type='submit' value='Edit'>
+</form>
+<a href= '{{url_for('Item', sport_id= item.sport_id)}}'>Cancel</a>
+
+{% endblock %}

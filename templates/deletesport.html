@@ -1,0 +1,14 @@
+{% extends "pageframework.html" %}
+
+{% block content %}
+
+<h1> Are you sure you want to delete? </h1>
+
+<form action="{{ url_for('deleteSport', sport_id=sport_id )}}" method = 'post'>
+
+<button type="submit" class="btn btn-default">Delete</button>
+
+</form>
+
+
+{% endblock %}

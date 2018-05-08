@@ -1,0 +1,23 @@
+{% extends "pageframework.html" %}
+
+{% block content %}
+<ul class="list-group">
+{% for sport in sports %}
+			<div>
+			<li class="list-group-item">
+			 <a href="/sports/{{sport.id}}/items">
+			  	<span>{{sport.name}}</span>
+			 </a>
+				<div>
+				  	<ul>
+						    <li><a href="/sports/{{sport.id}}/edit">Edit</a></li>
+						    <li>
+							      <a href="/sports/{{sport.id}}/delete">Delete</a>
+						    </li>
+					  </ul>
+				</div>
+			</li>
+			</div>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "pageframework.html" %}
+
+{% block content %}
+<p>
+<div><b>{{sport.name}}</b></div>
+<div>{{sport.description}}</div>
+<a href="/sports/{{sport.id}}/new">Add New Item</a>
+</p>
+{% for item in items %}
+			<div>
+			<li class="list-group-item">
+			 <a href="/item/{{ item.id }}">
+			  	<span>{{ item.name }} </span>
+					<div>{{ item.description }} </div>
+			 </a>
+<!--
+				<div>
+				  	<ul>
+						    <li><a href="/sports/{{item.sport.id}}/{{item.id}}/edit">Edit</a></li>
+						    <li>
+							      <a href="/sports/{{item.sport.id}}/{{item.id}}/delete">Delete</a>
+							      <form method="post" action="/sports/{{item.sport.id}}/{{item.id}}/delete"></form>
+						    </li>
+					  </ul>
+				</div>
+			</li>
+			</div>
+-->			
+{% endfor %}
+
+{% endblock %}

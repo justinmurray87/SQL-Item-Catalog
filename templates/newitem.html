@@ -1,0 +1,28 @@
+{% extends "pageframework.html" %}
+
+{% block content %}
+
+<h1> New Sports Gear Item </h1>
+
+<form class="form-horizontal" action="{{url_for('newItem', sport_id=sport_id )}}" method = 'POST'>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Name">Item Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="email" placeholder="Item Name" name='name'>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Description:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Enter Description" name='description'>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Create</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}
